@@ -1,0 +1,21 @@
+---
+import Nav from '../components/Nav.astro'
+import Footer from '../components/Footer.astro'
+const {pageTitle} = Astro.props;
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<link rel="stylesheet" href="https://use.typekit.net/nqo5tik.css">
+		<title>{pageTitle}</title>
+	</head>
+	<body class="font-ocr">
+		<Nav />
+		<slot />
+		<Footer />
+	</body>
+</html>

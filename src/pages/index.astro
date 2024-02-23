@@ -1,21 +1,17 @@
 ---
-
+import Layout from '../layouts/Layout.astro'
+const pageTitle = 'Home'
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<a href="/">Home</a>
-		<a href="/about/">About</a>
-
-		<h1>About Me</h1>
+<body>
+	<Layout pageTitle={pageTitle}>
+		<h1>{pageTitle}</h1>
 		<h2>... and my new Astro site!</h2>
 		<h1 class="text-4xl">My Astro Site</h1>
-	</body>
+		<ul>
+			<li><a href="/posts/post-1/">Post 1</a></li>
+			<li><a href="/posts/post-2/">Post 2</a></li>
+			<li><a href="/posts/post-3/">Post 3</a></li>
+		</ul>
+	</Layout>
 </html>
